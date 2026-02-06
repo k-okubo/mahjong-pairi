@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>牌効率トレーニングルーム</title>
+<link rel="stylesheet" href="./css/destyle.css">
+<link rel="stylesheet" href="./css/main.css">
+<script defer src='./js/mahjong.js'></script>
+<script defer src='./js/main.js'></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<header>
+  <h1>牌効率トレーニングルーム</h1>
+</header>
+
+<section>
+  <h2>牌山</h2>
+  <div class="haiyama-table" id="haiyama-container"></div>
+</section>
+
+<section>
+  <h2>手牌</h2>
+  <div>
+    <span class="control-group">
+      <input type="radio" id="tehai-max-nmentsu-2" name="max-nmentsu" value="2"><label for="tehai-max-nmentsu-2">7枚</label>
+      <input type="radio" id="tehai-max-nmentsu-3" name="max-nmentsu" value="3"><label for="tehai-max-nmentsu-3">10枚</label>
+      <input type="radio" id="tehai-max-nmentsu-4" name="max-nmentsu" value="4" checked><label for="tehai-max-nmentsu-4">13枚</label>
+    </span>
+    <span class="control-group">
+      <input type="checkbox" id="practice-mode"><label for="practice-mode">練習モード</label>
+    </span>
+    <span class="control-group">
+      <span id="tehai-num-label"></span>
+    </span>
+  </div>
+  <div class="tehai-area" id="tehai-container"></div>
+  <div class="command-area">
+    <button id="show-nanikiru">有効牌を表示</button>
+    <button id="tehai-clear">手牌クリア</button>
+    <button id="tehai-haipai">ランダム配牌</button>
+    <button id="tehai-sort">理牌</button>
+    <button id="tehai-tsumo">1枚引く</button>
+  </div>
+</section>
+
+<section id="sutehai-section">
+  <h2>捨て牌</h2>
+  <div class="sutehai-area" id="sutehai-container"></div>
+</section>
+
+<section id="nanikiru-section">
+  <h2>有効牌</h2>
+  <p class="mobile-notice">各行をタップすると有効牌の種類を表示します。</p>
+  <div class="nanikiru-table" id="nanikiru-container"></div>
+</section>
+
+<section class="popup-wrapper">
+  <div class="popup-container" id="yukouhai-popup">
+    <section>
+      <h2>受け入れ</h2>
+      <div id="ukeire-container"></div>
+    </section>
+    <section>
+      <h2>変化</h2>
+      <div id="henka-container"></div>
+    </section>
+  </div>
+  <div class="popup-background" id="popup-background"></div>
+</section>
+
+</body>
+</html>
